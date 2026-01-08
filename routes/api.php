@@ -48,10 +48,4 @@ Route::middleware('custom.auth')->group(function () {
     Route::delete('/video/{id_video}', [VideoController::class, 'destroy']);
 
     Route::get('/mentor/dashboard', [MentorDashboardController::class, 'getDashboardSummary']);
-    
-    // 2. View Detail Keuangan
-    Route::get('/mentor/pendapatan', [MentorDashboardController::class, 'getPendapatan']);
-    
-    // 3. View Detail Review
-    Route::get('/mentor/reviews', [MentorDashboardController::class, 'getReviews']);
 });
